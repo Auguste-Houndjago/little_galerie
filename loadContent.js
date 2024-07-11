@@ -1,4 +1,4 @@
-// loadContent.js
+
 
 function loadContent() {
     var xhr = new XMLHttpRequest();
@@ -15,5 +15,5 @@ function loadContent() {
     xhr.send();
 }
 
-// Appelez la fonction loadContent() lorsque vous cliquez sur l'élément "cadreImage"
+
 document.getElementById("cadreImage").onclick = loadContent;

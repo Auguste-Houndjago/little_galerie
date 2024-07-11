@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>galerie card</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="indispensable/normalize.min.css">
   <link rel="stylesheet" href="card_galerie.css">
 </head>
 

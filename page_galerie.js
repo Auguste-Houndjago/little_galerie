@@ -37,15 +37,12 @@ function afficherTexteAleatoire() {
 }
 
 
-  // Appeler la fonction pour afficher un texte aléatoire au chargement de la page
-
-
   function Lumière() {
     var div = document.querySelector('.border-blur');
     var shapes = ['circle', 'square', 'oval'];
     var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff' ,'#d3fd01ed' ];
-    var widths = [20, 70, 10]; // Define your own widths here
-    var heights = [50, 75, 10]; // Define your own heights here
+    var widths = [20, 70, 10]; 
+    var heights = [50, 75, 10]; 
     setInterval(function() {
       var randomShape = shapes[Math.floor(Math.random() * shapes.length)];
       var randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -65,7 +62,7 @@ function afficherTexteAleatoire() {
       div.style.backgroundColor = randomColor;
       div.style.width = randomWidth + 'px';
       div.style.height = randomHeight + 'px';
-    }, 1000); // Change shape, color, and size every 1 second
+    }, 1000); 
   }
 
 

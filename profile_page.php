@@ -31,11 +31,10 @@ document.getElementById("profile_choice").onchange = function () {
     let reader = new FileReader();
 
     reader.onload = function (e) {
-        // Mettre à jour l'image de profil
+ 
         document.getElementById("profle_pic").src = e.target.result;
     };
 
-    // lire le fichier image en tant que URL de données.
     reader.readAsDataURL(this.files[0]);
 };
 </script>
