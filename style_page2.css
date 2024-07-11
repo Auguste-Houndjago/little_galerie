@@ -1,0 +1,116 @@
+
+:root {
+   --bg: #2f2f2f;
+   --clr: #fff;
+}
+.navigation {
+   display: block;
+   justify-content: center;
+   align-items: center;
+   min-height: 30px;
+   background: var(--bg);
+  
+   box-shadow: 20px 1px 10px rgba(222, 198, 59, 0.9);
+}
+
+@keyframes pulse1 {
+   0% {
+       box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Bleu */
+   }
+   25% {
+       box-shadow: 0 0 20px rgba(254, 6, 126, 0.5); /* Blanc */
+       
+       box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); /* Rose */
+   }
+   50% {
+       box-shadow: 0 0 40px rgba(255, 255, 0, 0.5); /* Jaune */
+      
+   }
+   75% {
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5); /* Rouge */
+   }
+   100% {
+       box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Retour au bleu */
+   }
+}
+
+.navigation ul {
+   position: relative;
+   display: flex;
+   gap: 50px;
+   scale: 0.5;
+}
+.navigation ul li {
+   position: relative;
+   list-style: none;
+   width: 80px;
+   height: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: 0.5s;
+}
+.navigation ul li::before {
+   content: '';
+   position: absolute;
+   inset: 30px;
+   box-shadow: 0 0 0 10px var(--clr),
+               0 0 0 20px var(--bg),
+               0 0 0 22px var(--clr);
+   transition: 0.5s;
+}
+.navigation ul li:hover::before {
+   inset: 15px;
+}
+.navigation ul li::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: var(--bg);
+   transform: rotate(45deg);
+   transition: 0.5s;
+}
+.navigation ul li:hover::after {
+   inset: 0px;
+   transform: rotate(0deg);
+}
+.navigation ul li a {
+   position: relative;
+   text-decoration: none;
+   z-index: 10;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.navigation ul li a i {
+   font-size: 2em;
+   transition: 0.5s;
+   color: var(--clr);
+   opacity: 1;
+}
+.navigation ul li:hover a i {
+   color: var(--clr);
+   transform: translateY(-40%);
+}
+.navigation ul li a span {
+   position: absolute;
+   font-family: sans-serif;
+   color: var(--clr);
+   opacity: 0;
+   transition: 0.5s;
+   transform: scale(0) translateY(200%);
+}
+.navigation ul li:hover a span {
+   opacity: 1;
+   transform: scale(1) translateY(100%);
+}
+.navigation ul li:hover a i,
+.navigation ul li a span {
+   filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+
+}
+
+
+
+ 
